@@ -2,5 +2,13 @@
     {
         "question": "What is the capital of France?",
         "answer": "Paris"
+    },
+    {
+        "question": "What is the value of Pi?",
+        "answer": "3.14"
+    },
+    {
+        "question": "What is a basic concept of Streamlit?",
+        "answer": "A basic concept of Streamlit is that it is important to understand how it works."
     }
 ]
