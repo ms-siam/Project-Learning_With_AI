@@ -29,6 +29,6 @@ if st.button('Generate AI Flashcard'):
     ai_ques, ai_ans, ai_tag = generate_flashcard(topic)
     st.write(f"**Question:** {ai_ques}")
     st.write(f"**Answer:** {ai_ans}")
-    flashcards.append({"question": ai_ques, "answer": ai_ans})
+    flashcards.append({"question": ai_ques, "answer": ai_ans, "tag": ai_tag})
     save_flashcards(flashcards)
     st.success("AI-generated flashcard added!")
