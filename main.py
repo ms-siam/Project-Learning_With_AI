@@ -17,8 +17,8 @@ if st.button('Add Flashcard'):
 
 st.subheader("📘 Existing Flashcards")
 for i, card in enumerate(flashcards):
-    with st.expander(f"Question {i+1}: {card[ques]}"):
-        st.write(f"**Answer:** {card[ans]}")
+    with st.expander(f"Question {i+1}: {card['question']}"):
+        st.write(f"**Answer:** {card['answer']}")
 
 st.subheader("🤖 Generate Flashcard from Topic")
 topic = st.text_input('Enter a topic')
