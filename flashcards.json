@@ -1,0 +1,31 @@
+[
+    {
+        "question": "What is the capital of France?",
+        "answer": "Paris",
+        "tag": "Geography"
+    },
+    {
+        "question": "What is the value of Pi?",
+        "answer": "3.14",
+        "tag": "Mathematics"
+    },
+    {
+        "question": "What is a basic concept of Streamlit?",
+        "answer": "A basic concept of Streamlit is that it is important to understand how it works.",
+        "tag": "Web Development"
+    },
+    {
+        "question": "What are the three states of matter?",
+        "answer": "Solid, liquid, gas",
+        "tag": "Science"
+    },
+    {
+        "question": "What is a basic concept of Photosynthesis?",
+        "answer": "A basic concept of Photosynthesis is that it is important to understand how it works."
+    },
+    {
+        "question": "What is a basic concept of World War 2?",
+        "answer": "A basic concept of World War 2 is that it is important to understand how it works.",
+        "tag": "AI-generated"
+    }
+]
