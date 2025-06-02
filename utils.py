@@ -18,7 +18,7 @@ openai.api_key = st.secrets["OPENAI_API_KEY"]
 
 def generate_flashcard(topic):
     prompt = f"Generate 3 flashcards about the topic: {topic}. Format each as Question - Answer."
-    response = openai.ChatCompletions.create(
+    response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",  # You can use gpt-4 if you have access
         messages=[
             {"role": "system", "content": "You are a helpful flashcard generator."},
