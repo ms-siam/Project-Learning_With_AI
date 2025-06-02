@@ -12,6 +12,7 @@ def save_flashcards(flashcards, filepath="flashcards.json"):
     with open(filepath,"w") as f:
         json.dump(flashcards, f, indent=4)
 
+'''
 from openai import OpenAI
 
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
@@ -29,7 +30,7 @@ def generate_flashcard(topic):
     result = response.choices[0].message.content
 
     return result
-
+'''
 def parse_flashcards_from_text(text):
     lines = text.strip().split("\n")
     flashcards = []
