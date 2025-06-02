@@ -1,6 +1,5 @@
 import json
 import os
-import openai
 import streamlit as st
 
 def load_flashcards(filepath="flashcards.json"):
@@ -13,19 +12,22 @@ def save_flashcards(flashcards, filepath="flashcards.json"):
     with open(filepath,"w") as f:
         json.dump(flashcards, f, indent=4)
 
-import streamlit as st
-openai.api_key = st.secrets["OPENAI_API_KEY"]
+from openai import OpenAI
+
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
+
 
 def generate_flashcard(topic):
     prompt = f"Generate 3 flashcards about the topic: {topic}. Format each as Question - Answer."
-    response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",  # You can use gpt-4 if you have access
+    response = client.chat.completions.create(
+        model="gpt-3.5-turbo",
         messages=[
             {"role": "system", "content": "You are a helpful flashcard generator."},
             {"role": "user", "content": prompt}
         ]
     )
-    result = response['choices'][0]['message']['content']
+    result = response.choices[0].message.content
+
     return result
 
 def parse_flashcards_from_text(text):
