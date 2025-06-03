@@ -20,6 +20,9 @@ A simple AI-powered flashcard app built with Streamlit. Add your own flashcards 
 
 - Python 3.8 or higher
 - Hugging Face account (free)
+- streamlit
+- requests
+
 
 ### 📦 Install Dependencies
 
